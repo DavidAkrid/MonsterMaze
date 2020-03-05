@@ -1,0 +1,186 @@
+<html>
+
+    <head>
+        <script src="libs/three.js"></script>
+        <script src="libs/keyboard.js"></script>
+        <script src="js/PointerLockControls.js"></script>
+        <script src="js/jquery_v1.9.0.js"></script>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                background-color: #000000;
+                margin: 0;
+                overflow: hidden;
+                font-family: arial;
+            }
+
+            #blocker {
+
+                position: absolute;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: rgba(0,0,0,0.5);
+
+            }
+
+            #instructions {
+
+                width: 100%;
+                height: 100%;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+
+                -webkit-box-orient: horizontal;
+                -moz-box-orient: horizontal;
+                box-orient: horizontal;
+
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                box-align: center;
+
+                color: #ffffff;
+                text-align: center;
+
+                cursor: pointer;
+
+            }
+
+            h1 {
+                text-align: center;
+                color:#ffffff
+            }
+            h2 {
+                text-align: center;
+                color:#ffffff
+            }
+
+            p {
+                text-align: right;
+            }
+
+            #score-display
+            {
+                color: #FFFFFF;
+            }
+
+            #gameover {
+                    
+                position: absolute;
+
+                width: 100%;
+                height: 85%;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+
+                -webkit-box-orient: horizontal;
+                -moz-box-orient: horizontal;
+                box-orient: horizontal;
+
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                box-align: center;
+
+                color: #000000;
+                background-color: #ff0000;
+                opacity: 0;
+                text-align: center;
+            }
+
+            #gamewin {
+                    
+                position: absolute;
+
+                width: 100%;
+                height: 85%;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+
+                -webkit-box-orient: horizontal;
+                -moz-box-orient: horizontal;
+                box-orient: horizontal;
+
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                box-align: center;
+
+                color: #FFFFFF;
+                background-color: #01A02B;
+                opacity: 0;
+                text-align: center;
+            }
+
+            #winphoto {
+                position: absolute;
+                width:100%; /*width of your image*/
+                height:100%; /*height of your image*/
+                background-image:url('images\beg.jpg');
+                margin:0; /* If you want no margin */
+                padding:0; /*if your want to padding */
+            }
+        </style>
+    </head>
+
+<body>
+    <h1 id= "h1">WELCOME TO SPOOKY DUNJIN</h1>  
+    <h2 id= "h2">by David Akridge</h2>
+    <h2 id =h3>
+            Keys remaining: <div id="score-display"></div>
+    </h2>
+    
+    <div id="gameover">
+        <span style="font-size:85px">You Died.</span>
+        </br>
+        <span style="font-size:30px">Better luck next time.</span>
+    </div>
+
+    <div id="gamewin">
+        <span style="font-size:85px">You won!</span>
+        </br>
+        <span style="font-size:30px">You are a champion!</span>
+        </br></br></br></br>
+        <img src="images\beg.jpg">
+    </div>
+    
+    <script src="js/main.js"></script>
+
+    <div id="container">
+        <div id="blocker">
+                
+            <div id="instructions">
+                <span style="font-size:40px">Get the keys, find the exit</span>
+                <br />
+                (W, A, S, D = Move, SPACE = Jump, MOUSE = Look around)
+            </div>
+            
+        </div>
+    </div>
+    
+    
+
+</body>
+
+</html>
